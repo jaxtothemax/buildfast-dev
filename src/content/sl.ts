@@ -169,6 +169,40 @@ export const content: SiteContent = {
     ],
   },
 
+  transformations: {
+    label: 'naše delo',
+    title: 'Spletne strani, ki smo jih preoblikovali.',
+    subtitle: 'Povlecite razdelilnik za primerjavo starega in novega dizajna.',
+    beforeLabel: 'Pred prenovo',
+    afterLabel: 'Po prenovi',
+    slides: [
+      {
+        id: 1,
+        label: 'Prenova SaaS zagonskega podjetja',
+        beforeImage: 'https://placehold.co/1200x700/111111/444444?text=Pred+prenovo+—+SaaS',
+        afterImage: 'https://placehold.co/1200x700/0d1117/5ba3f5?text=Po+prenovi+—+SaaS',
+        beforeAlt: 'Spletna stran SaaS startup pred prenovo',
+        afterAlt: 'Spletna stran SaaS startup po prenovi',
+      },
+      {
+        id: 2,
+        label: 'Prenova spletne trgovine',
+        beforeImage: 'https://placehold.co/1200x700/111111/444444?text=Pred+prenovo+—+Trgovina',
+        afterImage: 'https://placehold.co/1200x700/0f1a10/4aad52?text=Po+prenovi+—+Trgovina',
+        beforeAlt: 'Spletna trgovina pred prenovo',
+        afterAlt: 'Spletna trgovina po prenovi',
+      },
+      {
+        id: 3,
+        label: 'Spletna stran agencije',
+        beforeImage: 'https://placehold.co/1200x700/111111/444444?text=Pred+prenovo+—+Agencija',
+        afterImage: 'https://placehold.co/1200x700/1a0d0d/f97316?text=Po+prenovi+—+Agencija',
+        beforeAlt: 'Spletna stran agencije pred prenovo',
+        afterAlt: 'Spletna stran agencije po prenovi',
+      },
+    ],
+  },
+
   pricing: {
     label: 'Cenik',
     title: 'Transparentne cene z fiksnim obsegom.',

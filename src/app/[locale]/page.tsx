@@ -10,6 +10,7 @@ import Stats from '@/components/sections/Stats';
 import Features from '@/components/sections/Features';
 import Process from '@/components/sections/Process';
 import Testimonials from '@/components/sections/Testimonials';
+import BeforeAfterSlider from '@/components/sections/BeforeAfterSlider';
 import Pricing from '@/components/sections/Pricing';
 import BottomCTA from '@/components/sections/BottomCTA';
 
@@ -32,6 +33,7 @@ export default async function HomePage({
       <Features content={content.features} />
       <Process content={content.process} />
       <Testimonials content={content.testimonials} />
+      <BeforeAfterSlider content={content.transformations} />
       <Pricing content={content.pricing} />
       <BottomCTA content={content.cta} />
       <Footer content={content.footer} locale={locale} />

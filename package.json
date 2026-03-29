@@ -16,6 +16,7 @@
     "next": "^14.2.29",
     "next-intl": "^3.26.3",
     "react": "^18",
+    "react-compare-slider": "^4.0.0",
     "react-dom": "^18",
     "split-type": "^0.3.4"
   },

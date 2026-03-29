@@ -169,6 +169,40 @@ export const content: SiteContent = {
     ],
   },
 
+  transformations: {
+    label: 'our work',
+    title: 'Websites we\'ve transformed.',
+    subtitle: 'Drag the divider to compare the old and new design side by side.',
+    beforeLabel: 'Before',
+    afterLabel: 'After',
+    slides: [
+      {
+        id: 1,
+        label: 'SaaS startup rebrand',
+        beforeImage: 'https://placehold.co/1200x700/111111/444444?text=Before+—+SaaS+Startup',
+        afterImage: 'https://placehold.co/1200x700/0d1117/5ba3f5?text=After+—+SaaS+Startup',
+        beforeAlt: 'SaaS startup website before redesign',
+        afterAlt: 'SaaS startup website after redesign',
+      },
+      {
+        id: 2,
+        label: 'E-commerce redesign',
+        beforeImage: 'https://placehold.co/1200x700/111111/444444?text=Before+—+E-commerce',
+        afterImage: 'https://placehold.co/1200x700/0f1a10/4aad52?text=After+—+E-commerce',
+        beforeAlt: 'E-commerce site before redesign',
+        afterAlt: 'E-commerce site after redesign',
+      },
+      {
+        id: 3,
+        label: 'Agency website',
+        beforeImage: 'https://placehold.co/1200x700/111111/444444?text=Before+—+Agency',
+        afterImage: 'https://placehold.co/1200x700/1a0d0d/f97316?text=After+—+Agency',
+        beforeAlt: 'Agency website before redesign',
+        afterAlt: 'Agency website after redesign',
+      },
+    ],
+  },
+
   pricing: {
     label: 'Pricing',
     title: 'Transparent, fixed-scope pricing.',

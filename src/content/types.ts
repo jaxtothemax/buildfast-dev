@@ -107,6 +107,24 @@ export interface FooterContent {
   copyright: string;
 }
 
+export interface TransformSlide {
+  id: number;
+  label: string;
+  beforeImage: string;
+  afterImage: string;
+  beforeAlt: string;
+  afterAlt: string;
+}
+
+export interface TransformationsContent {
+  label: string;
+  title: string;
+  subtitle: string;
+  beforeLabel: string;
+  afterLabel: string;
+  slides: TransformSlide[];
+}
+
 export interface SiteContent {
   nav: NavContent;
   ticker: TickerContent;
@@ -115,6 +133,7 @@ export interface SiteContent {
   features: FeaturesContent;
   process: ProcessContent;
   testimonials: TestimonialsContent;
+  transformations: TransformationsContent;
   pricing: PricingContent;
   cta: CTAContent;
   footer: FooterContent;
