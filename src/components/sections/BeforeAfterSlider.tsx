@@ -1,16 +1,12 @@
 'use client';
 
-import { useState, useRef, useEffect, useCallback, useMemo } from 'react';
+import { useState, useRef, useEffect, useCallback } from 'react';
 import { flushSync } from 'react-dom';
-import { useReactCompareSlider } from 'react-compare-slider/hooks';
 import {
-  Provider as SliderProvider,
-  Root as SliderRoot,
-  Item as SliderItem,
-  Handle as SliderHandle,
-  HandleRoot as SliderHandleRoot,
-  Image as SliderImage,
-} from 'react-compare-slider/components';
+  ReactCompareSlider,
+  ReactCompareSliderHandle,
+  ReactCompareSliderImage,
+} from 'react-compare-slider';
 import type { TransformationsContent } from '@/content/types';
 import { gsap, ScrollTrigger } from '@/lib/gsap';
 
@@ -18,7 +14,6 @@ interface BeforeAfterSliderProps {
   content: TransformationsContent;
 }
 
-// Pill badge for Before / After labels
 const badgeStyle: React.CSSProperties = {
   position: 'absolute',
   background: 'rgba(255,255,255,0.12)',
@@ -35,7 +30,18 @@ const badgeStyle: React.CSSProperties = {
   bottom: 16,
 };
 
-// Browser chrome wrapper
+// Set the slider's position by directly writing the CSS variable the library uses.
+// This matches what the library's internal setPosition() does, with no React re-render.
+function setSliderCSSPosition(container: HTMLDivElement | null, pos: number) {
+  const root = container?.querySelector<HTMLElement>('[data-rcs="root"]');
+  if (root) {
+    root.style.setProperty(
+      '--rcs-raw-position',
+      `${Math.min(100, Math.max(0, pos))}%`
+    );
+  }
+}
+
 function BrowserChrome({ children }: { children: React.ReactNode }) {
   return (
     <div
@@ -89,86 +95,28 @@ function BrowserChrome({ children }: { children: React.ReactNode }) {
   );
 }
 
-// The interactive compare slider built with the low-level API
-// so we have access to `setPosition` for programmatic control.
-interface ControlledSliderProps {
-  beforeSrc: string;
-  afterSrc: string;
-  beforeAlt: string;
-  afterAlt: string;
-  beforeLabel: string;
-  afterLabel: string;
-  setPositionRef: React.MutableRefObject<((pos: number) => void) | null>;
-}
-
-function ControlledSlider({
-  beforeSrc,
-  afterSrc,
-  beforeAlt,
-  afterAlt,
-  beforeLabel,
-  afterLabel,
-  setPositionRef,
-}: ControlledSliderProps) {
-  const sliderState = useReactCompareSlider({ defaultPosition: 50 });
-
-  // Expose setPosition to parent via ref
-  useEffect(() => {
-    setPositionRef.current = sliderState.setPosition;
-    return () => {
-      setPositionRef.current = null;
-    };
-  }, [sliderState.setPosition, setPositionRef]);
-
+function CompareHandle() {
   return (
-    <SliderProvider {...sliderState}>
-      <SliderRoot
-        style={{ position: 'relative', width: '100%', display: 'block', userSelect: 'none' }}
-      >
-        {/* Before — itemOne */}
-        <SliderItem item="itemOne" style={{ position: 'relative', display: 'block' }}>
-          <SliderImage
-            src={beforeSrc}
-            alt={beforeAlt}
-            style={{ display: 'block', width: '100%' }}
-          />
-          <div style={{ ...badgeStyle, left: 16 }}>{beforeLabel}</div>
-        </SliderItem>
-
-        {/* After — itemTwo */}
-        <SliderItem item="itemTwo" style={{ position: 'relative', display: 'block' }}>
-          <SliderImage
-            src={afterSrc}
-            alt={afterAlt}
-            style={{ display: 'block', width: '100%' }}
-          />
-          <div style={{ ...badgeStyle, right: 16 }}>{afterLabel}</div>
-        </SliderItem>
-
-        {/* Handle */}
-        <SliderHandleRoot>
-          <SliderHandle
-            style={{
-              width: 42,
-              height: 42,
-              borderRadius: '50%',
-              background: '#ffffff',
-              border: 'none',
-              boxShadow: '0 2px 16px rgba(0,0,0,0.45)',
-              display: 'flex',
-              alignItems: 'center',
-              justifyContent: 'center',
-              fontSize: 17,
-              color: '#000',
-              cursor: 'ew-resize',
-              flexShrink: 0,
-            }}
-          >
-            ↔
-          </SliderHandle>
-        </SliderHandleRoot>
-      </SliderRoot>
-    </SliderProvider>
+    <ReactCompareSliderHandle
+      buttonStyle={{
+        width: 42,
+        height: 42,
+        borderRadius: '50%',
+        background: '#ffffff',
+        border: 'none',
+        boxShadow: '0 2px 16px rgba(0,0,0,0.5)',
+        display: 'flex',
+        alignItems: 'center',
+        justifyContent: 'center',
+        fontSize: 17,
+        color: '#000',
+        cursor: 'ew-resize',
+        flexShrink: 0,
+      }}
+      linesStyle={{ width: 1, background: 'rgba(255,255,255,0.8)' }}
+    >
+      ↔
+    </ReactCompareSliderHandle>
   );
 }
 
@@ -182,21 +130,20 @@ export default function BeforeAfterSlider({ content }: BeforeAfterSliderProps) {
   const sectionRef = useRef<HTMLElement>(null);
   const headlineRef = useRef<HTMLHeadingElement>(null);
   const mockupRef = useRef<HTMLDivElement>(null);
+  // wraps the slider — animated for slide transitions
   const sliderWrapRef = useRef<HTMLDivElement>(null);
+  // inner container — queried for the [data-rcs="root"] element
+  const sliderContainerRef = useRef<HTMLDivElement>(null);
 
-  // Ref to the slider's setPosition function (populated by ControlledSlider)
-  const setPositionRef = useRef<((pos: number) => void) | null>(null);
-
-  // Stable navigate ref to avoid stale closures in keyboard handler
   const navigateFnRef = useRef<(dir: number) => void>(() => {});
 
   // ─── Entrance animation + sweep hint ───────────────────────────────────────
   useEffect(() => {
     const prefersReduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-    const section = sectionRef.current;
     const headline = headlineRef.current;
     const mockup = mockupRef.current;
-    if (!section || !headline || !mockup) return;
+    const section = sectionRef.current;
+    if (!headline || !mockup || !section) return;
 
     let splitInstance: { words: HTMLElement[]; revert: () => void } | null = null;
 
@@ -213,11 +160,7 @@ export default function BeforeAfterSlider({ content }: BeforeAfterSliderProps) {
       gsap.set(mockup, { y: 50, opacity: 0 });
 
       const tl = gsap.timeline({
-        scrollTrigger: {
-          trigger: section,
-          start: 'top 80%',
-          once: true,
-        },
+        scrollTrigger: { trigger: section, start: 'top 80%', once: true },
       });
 
       tl.to(splitInstance.words, {
@@ -240,13 +183,13 @@ export default function BeforeAfterSlider({ content }: BeforeAfterSliderProps) {
               val: 28,
               duration: 0.7,
               ease: 'power2.inOut',
-              onUpdate: () => setPositionRef.current?.(obj.val),
+              onUpdate: () => setSliderCSSPosition(sliderContainerRef.current, obj.val),
               onComplete: () => {
                 gsap.to(obj, {
                   val: 50,
                   duration: 0.65,
                   ease: 'power2.inOut',
-                  onUpdate: () => setPositionRef.current?.(obj.val),
+                  onUpdate: () => setSliderCSSPosition(sliderContainerRef.current, obj.val),
                 });
               },
             });
@@ -263,11 +206,10 @@ export default function BeforeAfterSlider({ content }: BeforeAfterSliderProps) {
     };
   }, []);
 
-  // ─── In-view tracking for keyboard nav ─────────────────────────────────────
+  // ─── In-view tracking ──────────────────────────────────────────────────────
   useEffect(() => {
     const section = sectionRef.current;
     if (!section) return;
-
     const st = ScrollTrigger.create({
       trigger: section,
       start: 'top 80%',
@@ -277,11 +219,10 @@ export default function BeforeAfterSlider({ content }: BeforeAfterSliderProps) {
       onEnterBack: () => setIsInView(true),
       onLeaveBack: () => setIsInView(false),
     });
-
     return () => st.kill();
   }, []);
 
-  // ─── Slide navigation with GSAP transition ─────────────────────────────────
+  // ─── Navigation with GSAP slide transition ─────────────────────────────────
   const navigate = useCallback(
     (dir: number) => {
       if (transitioning) return;
@@ -291,7 +232,6 @@ export default function BeforeAfterSlider({ content }: BeforeAfterSliderProps) {
 
       if (prefersReduced || !wrap) {
         flushSync(() => setCurrentSlide(nextIndex));
-        setPositionRef.current?.(50);
         return;
       }
 
@@ -305,10 +245,8 @@ export default function BeforeAfterSlider({ content }: BeforeAfterSliderProps) {
         duration: 0.3,
         ease: 'power2.in',
         onComplete: () => {
-          // Force synchronous React re-render before animating in
+          // Synchronous re-render so DOM is updated before incoming animation
           flushSync(() => setCurrentSlide(nextIndex));
-          setPositionRef.current?.(50);
-
           gsap.fromTo(
             wrap,
             { opacity: 0, x: xIn },
@@ -326,7 +264,6 @@ export default function BeforeAfterSlider({ content }: BeforeAfterSliderProps) {
     [currentSlide, transitioning, slides.length]
   );
 
-  // Keep navigateFnRef current
   useEffect(() => {
     navigateFnRef.current = navigate;
   }, [navigate]);
@@ -365,24 +302,39 @@ export default function BeforeAfterSlider({ content }: BeforeAfterSliderProps) {
         {/* Slider — max-w-[1000px] centered */}
         <div ref={mockupRef} className="max-w-[1000px] mx-auto">
           <BrowserChrome>
-            {/* ── Desktop: interactive slider ── */}
+            {/* ── Desktop: interactive compare slider ── */}
             <div ref={sliderWrapRef} className="hidden md:block">
-              <ControlledSlider
-                key={currentSlide}
-                beforeSrc={slide.beforeImage}
-                afterSrc={slide.afterImage}
-                beforeAlt={slide.beforeAlt}
-                afterAlt={slide.afterAlt}
-                beforeLabel={content.beforeLabel}
-                afterLabel={content.afterLabel}
-                setPositionRef={setPositionRef}
-              />
+              <div ref={sliderContainerRef}>
+                <ReactCompareSlider
+                  key={currentSlide}
+                  defaultPosition={50}
+                  handle={<CompareHandle />}
+                  itemOne={
+                    <div style={{ position: 'relative' }}>
+                      <ReactCompareSliderImage
+                        src={slide.beforeImage}
+                        alt={slide.beforeAlt}
+                      />
+                      <div style={{ ...badgeStyle, left: 16 }}>{content.beforeLabel}</div>
+                    </div>
+                  }
+                  itemTwo={
+                    <div style={{ position: 'relative' }}>
+                      <ReactCompareSliderImage
+                        src={slide.afterImage}
+                        alt={slide.afterAlt}
+                      />
+                      <div style={{ ...badgeStyle, right: 16 }}>{content.afterLabel}</div>
+                    </div>
+                  }
+                />
+              </div>
             </div>
 
-            {/* ── Mobile: stacked static layout ── */}
+            {/* ── Mobile: stacked layout ── */}
             <div className="md:hidden">
-              {/* eslint-disable-next-line @next/next/no-img-element */}
-              <div className="relative">
+              <div style={{ position: 'relative' }}>
+                {/* eslint-disable-next-line @next/next/no-img-element */}
                 <img
                   src={slide.beforeImage}
                   alt={slide.beforeAlt}
@@ -392,8 +344,10 @@ export default function BeforeAfterSlider({ content }: BeforeAfterSliderProps) {
                 <div style={{ ...badgeStyle, left: 12 }}>{content.beforeLabel}</div>
               </div>
               <div
-                className="relative"
-                style={{ borderTop: '1px solid rgba(255,255,255,0.08)' }}
+                style={{
+                  position: 'relative',
+                  borderTop: '1px solid rgba(255,255,255,0.08)',
+                }}
               >
                 {/* eslint-disable-next-line @next/next/no-img-element */}
                 <img
@@ -407,66 +361,43 @@ export default function BeforeAfterSlider({ content }: BeforeAfterSliderProps) {
             </div>
           </BrowserChrome>
 
-          {/* Controls row */}
+          {/* Controls */}
           <div className="mt-5 flex items-center justify-between px-1">
-            {/* Slide counter — bottom-left as per spec */}
             <span className="font-mono text-xs text-white/35">
               {currentSlide + 1}/{slides.length}
             </span>
-
-            {/* Project label — center */}
             <span className="font-mono text-xs text-white/50 text-center">{slide.label}</span>
-
-            {/* Arrows — bottom-right */}
             <div className="flex items-center gap-2">
-              <button
-                onClick={() => navigate(-1)}
-                disabled={transitioning}
-                aria-label="Previous project"
-                className="w-8 h-8 flex items-center justify-center rounded-full text-sm transition-colors duration-200 disabled:opacity-40"
-                style={{
-                  border: '1px solid rgba(255,255,255,0.12)',
-                  color: 'rgba(255,255,255,0.7)',
-                  background: 'transparent',
-                }}
-                onMouseEnter={(e) => {
-                  (e.currentTarget as HTMLButtonElement).style.borderColor =
-                    'rgba(255,255,255,0.3)';
-                  (e.currentTarget as HTMLButtonElement).style.color = '#fff';
-                }}
-                onMouseLeave={(e) => {
-                  (e.currentTarget as HTMLButtonElement).style.borderColor =
-                    'rgba(255,255,255,0.12)';
-                  (e.currentTarget as HTMLButtonElement).style.color =
-                    'rgba(255,255,255,0.7)';
-                }}
-              >
-                ←
-              </button>
-              <button
-                onClick={() => navigate(1)}
-                disabled={transitioning}
-                aria-label="Next project"
-                className="w-8 h-8 flex items-center justify-center rounded-full text-sm transition-colors duration-200 disabled:opacity-40"
-                style={{
-                  border: '1px solid rgba(255,255,255,0.12)',
-                  color: 'rgba(255,255,255,0.7)',
-                  background: 'transparent',
-                }}
-                onMouseEnter={(e) => {
-                  (e.currentTarget as HTMLButtonElement).style.borderColor =
-                    'rgba(255,255,255,0.3)';
-                  (e.currentTarget as HTMLButtonElement).style.color = '#fff';
-                }}
-                onMouseLeave={(e) => {
-                  (e.currentTarget as HTMLButtonElement).style.borderColor =
-                    'rgba(255,255,255,0.12)';
-                  (e.currentTarget as HTMLButtonElement).style.color =
-                    'rgba(255,255,255,0.7)';
-                }}
-              >
-                →
-              </button>
+              {[
+                { dir: -1, label: 'Previous project', arrow: '←' },
+                { dir: 1, label: 'Next project', arrow: '→' },
+              ].map(({ dir, label, arrow }) => (
+                <button
+                  key={dir}
+                  onClick={() => navigate(dir)}
+                  disabled={transitioning}
+                  aria-label={label}
+                  className="w-8 h-8 flex items-center justify-center rounded-full text-sm transition-colors duration-200 disabled:opacity-40"
+                  style={{
+                    border: '1px solid rgba(255,255,255,0.12)',
+                    color: 'rgba(255,255,255,0.7)',
+                    background: 'transparent',
+                  }}
+                  onMouseEnter={(e) => {
+                    (e.currentTarget as HTMLButtonElement).style.borderColor =
+                      'rgba(255,255,255,0.3)';
+                    (e.currentTarget as HTMLButtonElement).style.color = '#fff';
+                  }}
+                  onMouseLeave={(e) => {
+                    (e.currentTarget as HTMLButtonElement).style.borderColor =
+                      'rgba(255,255,255,0.12)';
+                    (e.currentTarget as HTMLButtonElement).style.color =
+                      'rgba(255,255,255,0.7)';
+                  }}
+                >
+                  {arrow}
+                </button>
+              ))}
             </div>
           </div>
         </div>

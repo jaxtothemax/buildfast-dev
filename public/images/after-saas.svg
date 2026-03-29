@@ -1,0 +1,86 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 700" width="1200" height="700">
+  <!-- Background -->
+  <rect width="1200" height="700" fill="#ffffff"/>
+
+  <!-- Nav -->
+  <rect width="1200" height="64" fill="#ffffff"/>
+  <rect y="64" width="1200" height="1" fill="#e8e8e8"/>
+
+  <!-- Logo -->
+  <rect x="40" y="22" width="20" height="20" rx="5" fill="#6366f1"/>
+  <text x="68" y="37" font-family="Arial, Helvetica, sans-serif" font-size="16" fill="#111111" font-weight="bold" letter-spacing="-0.3">Pulse</text>
+
+  <!-- Nav links -->
+  <text x="420" y="37" font-family="Arial, sans-serif" font-size="13" fill="#555555">Product</text>
+  <text x="490" y="37" font-family="Arial, sans-serif" font-size="13" fill="#555555">Pricing</text>
+  <text x="556" y="37" font-family="Arial, sans-serif" font-size="13" fill="#555555">Docs</text>
+  <text x="606" y="37" font-family="Arial, sans-serif" font-size="13" fill="#555555">Changelog</text>
+
+  <!-- Nav right -->
+  <text x="1010" y="37" font-family="Arial, sans-serif" font-size="13" fill="#555555">Sign in</text>
+  <rect x="1070" y="18" width="96" height="32" rx="6" fill="#6366f1"/>
+  <text x="1118" y="38" text-anchor="middle" font-family="Arial" font-size="13" fill="white" font-weight="bold">Get started</text>
+
+  <!-- Hero section -->
+  <rect y="65" width="1200" height="370" fill="#fafafa"/>
+
+  <!-- Badge -->
+  <rect x="452" y="104" width="296" height="28" rx="14" fill="#eef2ff" stroke="#c7d2fe" stroke-width="1"/>
+  <rect x="468" y="114" width="8" height="8" rx="4" fill="#6366f1"/>
+  <text x="484" y="122" font-family="Arial, sans-serif" font-size="11" fill="#4338ca">Introducing Pulse 2.0 — smarter analytics</text>
+
+  <!-- Hero headline -->
+  <text x="600" y="194" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="52" fill="#111111" font-weight="bold" letter-spacing="-1.5">Know your business</text>
+  <text x="600" y="254" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="52" fill="#111111" font-weight="bold" letter-spacing="-1.5">before it knows you.</text>
+
+  <!-- Subheadline -->
+  <text x="600" y="302" text-anchor="middle" font-family="Arial, sans-serif" font-size="16" fill="#666666">Revenue analytics, cohort tracking, and churn prediction</text>
+  <text x="600" y="322" text-anchor="middle" font-family="Arial, sans-serif" font-size="16" fill="#666666">for subscription businesses. No SQL required.</text>
+
+  <!-- CTA row -->
+  <rect x="448" y="352" width="168" height="44" rx="6" fill="#6366f1"/>
+  <text x="532" y="379" text-anchor="middle" font-family="Arial" font-size="14" fill="white" font-weight="bold">Start free — 14 days</text>
+
+  <rect x="632" y="352" width="120" height="44" rx="6" fill="white" stroke="#e0e0e0" stroke-width="1.5"/>
+  <text x="692" y="379" text-anchor="middle" font-family="Arial" font-size="14" fill="#333333">See a demo</text>
+
+  <!-- Social proof -->
+  <text x="600" y="432" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" fill="#999999">Trusted by 3,200+ companies including:</text>
+
+  <!-- Divider -->
+  <rect y="435" width="1200" height="1" fill="#e8e8e8"/>
+
+  <!-- Feature row -->
+  <rect y="436" width="1200" height="264" fill="#ffffff"/>
+
+  <!-- Section label -->
+  <text x="600" y="476" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" fill="#6366f1" letter-spacing="1.5" font-weight="bold">WHAT YOU GET</text>
+  <text x="600" y="508" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="26" fill="#111111" font-weight="bold" letter-spacing="-0.5">Everything you need, nothing you don't</text>
+
+  <!-- Feature 1 -->
+  <rect x="60" y="536" width="320" height="128" rx="8" fill="#fafafa" stroke="#eeeeee" stroke-width="1"/>
+  <rect x="80" y="556" width="28" height="28" rx="6" fill="#eef2ff"/>
+  <text x="94" y="575" text-anchor="middle" font-family="Arial" font-size="14" fill="#6366f1">▲</text>
+  <text x="118" y="572" font-family="Arial, sans-serif" font-size="13" fill="#111111" font-weight="bold">Revenue analytics</text>
+  <text x="80" y="598" font-family="Arial, sans-serif" font-size="12" fill="#777777">MRR, ARR, and expansion revenue</text>
+  <text x="80" y="614" font-family="Arial, sans-serif" font-size="12" fill="#777777">tracked automatically from Stripe.</text>
+  <text x="80" y="636" font-family="Arial, sans-serif" font-size="12" fill="#6366f1">Learn more →</text>
+
+  <!-- Feature 2 -->
+  <rect x="440" y="536" width="320" height="128" rx="8" fill="#fafafa" stroke="#eeeeee" stroke-width="1"/>
+  <rect x="460" y="556" width="28" height="28" rx="6" fill="#eef2ff"/>
+  <text x="474" y="575" text-anchor="middle" font-family="Arial" font-size="14" fill="#6366f1">◉</text>
+  <text x="498" y="572" font-family="Arial, sans-serif" font-size="13" fill="#111111" font-weight="bold">Churn prediction</text>
+  <text x="460" y="598" font-family="Arial, sans-serif" font-size="12" fill="#777777">Spot at-risk customers 30 days early</text>
+  <text x="460" y="614" font-family="Arial, sans-serif" font-size="12" fill="#777777">with AI-powered health scoring.</text>
+  <text x="460" y="636" font-family="Arial, sans-serif" font-size="12" fill="#6366f1">Learn more →</text>
+
+  <!-- Feature 3 -->
+  <rect x="820" y="536" width="320" height="128" rx="8" fill="#fafafa" stroke="#eeeeee" stroke-width="1"/>
+  <rect x="840" y="556" width="28" height="28" rx="6" fill="#eef2ff"/>
+  <text x="854" y="575" text-anchor="middle" font-family="Arial" font-size="14" fill="#6366f1">≡</text>
+  <text x="878" y="572" font-family="Arial, sans-serif" font-size="13" fill="#111111" font-weight="bold">Cohort analysis</text>
+  <text x="840" y="598" font-family="Arial, sans-serif" font-size="12" fill="#777777">Understand retention by signup month,</text>
+  <text x="840" y="614" font-family="Arial, sans-serif" font-size="12" fill="#777777">plan, or acquisition channel.</text>
+  <text x="840" y="636" font-family="Arial, sans-serif" font-size="12" fill="#6366f1">Learn more →</text>
+</svg>

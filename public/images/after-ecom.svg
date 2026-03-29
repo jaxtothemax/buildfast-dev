@@ -1,0 +1,80 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 700" width="1200" height="700">
+  <!-- Background -->
+  <rect width="1200" height="700" fill="#fafafa"/>
+
+  <!-- Nav -->
+  <rect width="1200" height="64" fill="white"/>
+  <rect y="64" width="1200" height="1" fill="#e5e5e5"/>
+  <text x="40" y="39" font-family="Arial, Helvetica, sans-serif" font-size="20" fill="#111111" font-weight="bold" letter-spacing="-0.5">Forêt</text>
+  <text x="40" y="55" font-family="Arial, sans-serif" font-size="9" fill="#aaaaaa" letter-spacing="2">PREMIUM GOODS</text>
+
+  <!-- Nav links -->
+  <text x="390" y="38" font-family="Arial, sans-serif" font-size="13" fill="#555555">Shop</text>
+  <text x="440" y="38" font-family="Arial, sans-serif" font-size="13" fill="#555555">Collections</text>
+  <text x="548" y="38" font-family="Arial, sans-serif" font-size="13" fill="#555555">About</text>
+  <text x="610" y="38" font-family="Arial, sans-serif" font-size="13" fill="#555555">Journal</text>
+
+  <!-- Nav right -->
+  <text x="1020" y="38" font-family="Arial, sans-serif" font-size="13" fill="#555555">Search</text>
+  <text x="1090" y="38" font-family="Arial, sans-serif" font-size="13" fill="#555555">Account</text>
+  <text x="1160" y="38" font-family="Arial, sans-serif" font-size="13" fill="#111111" font-weight="bold">Bag (2)</text>
+
+  <!-- Hero - split layout -->
+  <rect y="65" width="580" height="440" fill="#111111"/>
+  <rect x="580" y="65" width="620" height="440" fill="#f0ede8"/>
+
+  <!-- Left hero text -->
+  <text x="60" y="170" font-family="Georgia, serif" font-size="14" fill="rgba(255,255,255,0.5)" letter-spacing="3">NEW COLLECTION</text>
+  <text x="60" y="230" font-family="Georgia, serif" font-size="52" fill="white">Autumn</text>
+  <text x="60" y="290" font-family="Georgia, serif" font-size="52" fill="white">Essentials</text>
+  <text x="60" y="340" font-family="Arial, sans-serif" font-size="15" fill="rgba(255,255,255,0.55)">Crafted for the modern wardrobe.</text>
+  <text x="60" y="360" font-family="Arial, sans-serif" font-size="15" fill="rgba(255,255,255,0.55)">Timeless pieces, sustainable materials.</text>
+
+  <rect x="60" y="390" width="160" height="46" rx="0" fill="white"/>
+  <text x="140" y="420" text-anchor="middle" font-family="Arial" font-size="13" fill="#111111" font-weight="bold" letter-spacing="1">SHOP NOW</text>
+
+  <text x="240" y="420" font-family="Arial" font-size="13" fill="rgba(255,255,255,0.5)" text-decoration="underline">View lookbook →</text>
+
+  <!-- Right hero image placeholder -->
+  <rect x="600" y="85" width="580" height="400" fill="#e8e4de"/>
+  <text x="890" y="300" text-anchor="middle" font-family="Georgia, serif" font-size="16" fill="#999999">[ Product Photography ]</text>
+
+  <!-- Category strip -->
+  <rect y="505" width="1200" height="1" fill="#e5e5e5"/>
+  <rect y="505" width="1200" height="80" fill="white"/>
+  <rect y="585" width="1200" height="1" fill="#e5e5e5"/>
+
+  <text x="100" y="554" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" fill="#111111" letter-spacing="1">OUTERWEAR</text>
+  <text x="300" y="554" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" fill="#111111" letter-spacing="1">KNITWEAR</text>
+  <text x="500" y="554" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" fill="#111111" letter-spacing="1">ACCESSORIES</text>
+  <text x="700" y="554" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" fill="#111111" letter-spacing="1">FOOTWEAR</text>
+  <text x="900" y="554" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" fill="#111111" letter-spacing="1">BAGS</text>
+  <text x="1100" y="554" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" fill="#111111" letter-spacing="1">SALE</text>
+
+  <!-- Product grid -->
+  <rect y="586" width="1200" height="114" fill="#fafafa"/>
+  <text x="40" y="620" font-family="Georgia, serif" font-size="18" fill="#111111">Featured pieces</text>
+
+  <!-- Product 1 -->
+  <rect x="40" y="636" width="132" height="52" fill="#e8e4de" rx="2"/>
+  <text x="106" y="664" text-anchor="middle" font-family="Arial" font-size="10" fill="#888888">Image</text>
+  <text x="40" y="695" font-family="Arial" font-size="11" fill="#111111">Wool overcoat</text>
+  <text x="40" y="710" font-family="Arial" font-size="11" fill="#888888">€ 289</text>
+
+  <!-- Product 2 -->
+  <rect x="188" y="636" width="132" height="52" fill="#e8e4de" rx="2"/>
+  <text x="254" y="664" text-anchor="middle" font-family="Arial" font-size="10" fill="#888888">Image</text>
+  <text x="188" y="695" font-family="Arial" font-size="11" fill="#111111">Cashmere knit</text>
+  <text x="188" y="710" font-family="Arial" font-size="11" fill="#888888">€ 165</text>
+
+  <!-- Product 3 -->
+  <rect x="336" y="636" width="132" height="52" fill="#e8e4de" rx="2"/>
+  <text x="402" y="664" text-anchor="middle" font-family="Arial" font-size="10" fill="#888888">Image</text>
+  <text x="336" y="695" font-family="Arial" font-size="11" fill="#111111">Leather bag</text>
+  <text x="336" y="710" font-family="Arial" font-size="11" fill="#888888">€ 425</text>
+
+  <!-- Promo badge -->
+  <rect x="700" y="636" width="460" height="64" rx="4" fill="#111111"/>
+  <text x="920" y="660" text-anchor="middle" font-family="Georgia, serif" font-size="15" fill="white">Free shipping on orders over €150</text>
+  <text x="920" y="684" text-anchor="middle" font-family="Arial" font-size="12" fill="rgba(255,255,255,0.5)">Delivered in 2–4 working days. Free returns.</text>
+</svg>

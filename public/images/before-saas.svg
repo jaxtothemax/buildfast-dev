@@ -1,0 +1,122 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 700" width="1200" height="700">
+  <defs>
+    <linearGradient id="navGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#1e4a8f"/>
+      <stop offset="100%" stop-color="#153570"/>
+    </linearGradient>
+    <linearGradient id="heroGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#e8eef8"/>
+      <stop offset="100%" stop-color="#d0daf0"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Page background -->
+  <rect width="1200" height="700" fill="#f2f2f2"/>
+
+  <!-- Nav bar -->
+  <rect width="1200" height="58" fill="url(#navGrad)"/>
+
+  <!-- Logo -->
+  <text x="22" y="34" font-family="Arial, sans-serif" font-size="22" fill="white" font-weight="bold">MySaaS Pro</text>
+  <text x="138" y="34" font-family="Arial, sans-serif" font-size="11" fill="#7aaad8">™</text>
+  <text x="22" y="50" font-family="Arial, sans-serif" font-size="9" fill="#7aaad8" letter-spacing="1.5">BUSINESS SOFTWARE SOLUTIONS</text>
+
+  <!-- Nav links -->
+  <text x="290" y="34" font-family="Arial, sans-serif" font-size="12" fill="white" font-weight="bold">Home</text>
+  <text x="340" y="34" font-family="Arial, sans-serif" font-size="12" fill="#aaccee">About Us</text>
+  <text x="406" y="34" font-family="Arial, sans-serif" font-size="12" fill="#aaccee">Features</text>
+  <text x="470" y="34" font-family="Arial, sans-serif" font-size="12" fill="#aaccee">Pricing</text>
+  <text x="520" y="34" font-family="Arial, sans-serif" font-size="12" fill="#aaccee">Support</text>
+  <text x="576" y="34" font-family="Arial, sans-serif" font-size="12" fill="#aaccee">Contact</text>
+
+  <!-- Login button -->
+  <rect x="1080" y="12" width="96" height="32" fill="#e8830a" rx="3"/>
+  <text x="1128" y="32" text-anchor="middle" font-family="Arial" font-size="13" fill="white" font-weight="bold">Log In</text>
+
+  <!-- Announcement bar -->
+  <rect y="58" width="1200" height="22" fill="#2d5fa0"/>
+  <text x="600" y="73" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" fill="#ccddf5">New: Version 3.2 is here! Limited time — 30% off all plans this week. Click here to claim.</text>
+
+  <!-- Hero section -->
+  <rect y="80" width="1200" height="200" fill="url(#heroGrad)"/>
+  <rect x="0" y="80" width="4" height="200" fill="#1e4a8f"/>
+
+  <!-- Hero text -->
+  <text x="36" y="126" font-family="Arial, sans-serif" font-size="30" fill="#1a2e50" font-weight="bold">Welcome to MySaaS Pro!</text>
+  <text x="36" y="158" font-family="Arial, sans-serif" font-size="16" fill="#2d5fa0">The #1 Business Software Solution — Trusted by 500+ Companies</text>
+  <text x="36" y="188" font-family="Arial, sans-serif" font-size="13" fill="#444444">Manage your entire business in one place. Track sales, customers,</text>
+  <text x="36" y="204" font-family="Arial, sans-serif" font-size="13" fill="#444444">invoices, and reports — all from a single dashboard.</text>
+  <text x="36" y="232" font-family="Arial, sans-serif" font-size="11" fill="#0066cc" text-decoration="underline">→ Read what our customers are saying</text>
+  <text x="36" y="252" font-family="Arial, sans-serif" font-size="10" fill="#999999">*Results based on internal survey, Q3 2013. Individual results may vary.</text>
+
+  <!-- CTAs (too many, clashing) -->
+  <rect x="730" y="100" width="180" height="46" fill="#e8830a" rx="3"/>
+  <text x="820" y="128" text-anchor="middle" font-family="Arial" font-size="15" fill="white" font-weight="bold">Free Trial</text>
+  <text x="820" y="143" text-anchor="middle" font-family="Arial" font-size="10" fill="#fde8c9">No credit card required</text>
+
+  <rect x="730" y="158" width="180" height="46" fill="#2d8a2d" rx="3"/>
+  <text x="820" y="185" text-anchor="middle" font-family="Arial" font-size="15" fill="white" font-weight="bold">Buy Now — $99/mo</text>
+  <text x="820" y="199" text-anchor="middle" font-family="Arial" font-size="10" fill="#bde8bd">Was $149 — Save 33%!</text>
+
+  <rect x="730" y="216" width="180" height="38" fill="#555555" rx="3"/>
+  <text x="820" y="239" text-anchor="middle" font-family="Arial" font-size="13" fill="white">Download Brochure</text>
+
+  <!-- Screenshot placeholder -->
+  <rect x="938" y="88" width="228" height="176" fill="#cccccc" stroke="#aaaaaa" stroke-width="1"/>
+  <rect x="948" y="96" width="208" height="124" fill="#e0e0e0"/>
+  <text x="1052" y="162" text-anchor="middle" font-family="Arial" font-size="11" fill="#888888">[screenshot]</text>
+  <text x="1052" y="258" text-anchor="middle" font-family="Arial" font-size="9" fill="#888888">Click to enlarge</text>
+
+  <!-- Blue divider bar -->
+  <rect y="280" width="1200" height="22" fill="#1e4a8f"/>
+  <text x="600" y="296" text-anchor="middle" font-family="Arial" font-size="11" fill="#aaccee" letter-spacing="2">OUR FEATURES — WHY CHOOSE US — LEARN MORE</text>
+
+  <!-- 3-column content -->
+  <rect y="302" width="1200" height="320" fill="#ebebeb"/>
+
+  <!-- Col 1 -->
+  <rect x="18" y="314" width="368" height="288" fill="white" stroke="#cccccc" stroke-width="1"/>
+  <rect x="18" y="314" width="368" height="36" fill="#1e4a8f"/>
+  <text x="34" y="338" font-family="Arial" font-size="14" fill="white" font-weight="bold">Reporting Dashboard</text>
+  <rect x="28" y="364" width="348" height="88" fill="#f4f4f4" stroke="#dddddd" stroke-width="1"/>
+  <text x="202" y="410" text-anchor="middle" font-family="Arial" font-size="11" fill="#aaaaaa">[chart screenshot]</text>
+  <text x="34" y="476" font-family="Arial, sans-serif" font-size="12" fill="#333333">Track every metric that matters — MRR,</text>
+  <text x="34" y="494" font-family="Arial, sans-serif" font-size="12" fill="#333333">churn, and revenue — in one dashboard.</text>
+  <text x="34" y="512" font-family="Arial, sans-serif" font-size="12" fill="#333333">Export to Excel or print for your boss!</text>
+  <text x="34" y="548" font-family="Arial" font-size="12" fill="#0066cc" text-decoration="underline">Read more »</text>
+  <rect x="34" y="560" width="110" height="24" fill="#e8830a" rx="2"/>
+  <text x="89" y="577" text-anchor="middle" font-family="Arial" font-size="11" fill="white" font-weight="bold">Learn More</text>
+
+  <!-- Col 2 -->
+  <rect x="416" y="314" width="368" height="288" fill="white" stroke="#cccccc" stroke-width="1"/>
+  <rect x="416" y="314" width="368" height="36" fill="#c0392b"/>
+  <text x="432" y="338" font-family="Arial" font-size="14" fill="white" font-weight="bold">Cloud Storage</text>
+  <rect x="426" y="364" width="348" height="88" fill="#f4f4f4" stroke="#dddddd" stroke-width="1"/>
+  <text x="600" y="410" text-anchor="middle" font-family="Arial" font-size="11" fill="#aaaaaa">[screenshot]</text>
+  <text x="432" y="476" font-family="Arial, sans-serif" font-size="12" fill="#333333">Your data is safely stored on our secure</text>
+  <text x="432" y="494" font-family="Arial, sans-serif" font-size="12" fill="#333333">servers!! Access files from anywhere using</text>
+  <text x="432" y="512" font-family="Arial, sans-serif" font-size="12" fill="#333333">Internet Explorer, Firefox, or Chrome!</text>
+  <text x="432" y="548" font-family="Arial" font-size="12" fill="#0066cc" text-decoration="underline">Read more »</text>
+  <rect x="432" y="560" width="110" height="24" fill="#2d8a2d" rx="2"/>
+  <text x="487" y="577" text-anchor="middle" font-family="Arial" font-size="11" fill="white" font-weight="bold">Learn More</text>
+
+  <!-- Col 3 -->
+  <rect x="814" y="314" width="368" height="288" fill="white" stroke="#cccccc" stroke-width="1"/>
+  <rect x="814" y="314" width="368" height="36" fill="#6a5acd"/>
+  <text x="830" y="338" font-family="Arial" font-size="14" fill="white" font-weight="bold">Customer Support</text>
+  <rect x="824" y="364" width="348" height="88" fill="#f4f4f4" stroke="#dddddd" stroke-width="1"/>
+  <text x="998" y="410" text-anchor="middle" font-family="Arial" font-size="11" fill="#aaaaaa">[screenshot]</text>
+  <text x="830" y="476" font-family="Arial, sans-serif" font-size="12" fill="#333333">Our support team answers emails within</text>
+  <text x="830" y="494" font-family="Arial, sans-serif" font-size="12" fill="#333333">48 hours! Call toll-free Mon–Fri 9am–5pm</text>
+  <text x="830" y="512" font-family="Arial, sans-serif" font-size="12" fill="#333333">Eastern Standard Time. USA only.</text>
+  <text x="830" y="548" font-family="Arial" font-size="12" fill="#0066cc" text-decoration="underline">Read more »</text>
+  <rect x="830" y="560" width="110" height="24" fill="#6a5acd" rx="2"/>
+  <text x="885" y="577" text-anchor="middle" font-family="Arial" font-size="11" fill="white" font-weight="bold">Get Support</text>
+
+  <!-- Footer -->
+  <rect y="622" width="1200" height="78" fill="#1a1a1a"/>
+  <text x="20" y="648" font-family="Arial" font-size="11" fill="#888888">© 2013 MySaaS Pro — All Rights Reserved | Privacy Policy | Terms of Service | Sitemap</text>
+  <text x="20" y="666" font-family="Arial" font-size="10" fill="#555555">You are visitor #004,827 | Best viewed at 1024×768 | Powered by FrontPage 2003</text>
+  <rect x="1110" y="630" width="72" height="22" fill="#2d5fa0" rx="2"/>
+  <text x="1146" y="646" text-anchor="middle" font-family="Arial" font-size="10" fill="white">Top ↑</text>
+</svg>

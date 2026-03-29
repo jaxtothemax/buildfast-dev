@@ -1,0 +1,135 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 700" width="1200" height="700">
+  <!-- Background -->
+  <rect width="1200" height="700" fill="#f5f5f5"/>
+
+  <!-- Top announcement bar -->
+  <rect width="1200" height="28" fill="#b91c1c"/>
+  <text x="600" y="19" text-anchor="middle" font-family="Arial" font-size="12" fill="white" font-weight="bold">SUMMER SALE — Up to 60% off selected items. Free shipping over $49. Use code SUMMER24</text>
+
+  <!-- Header -->
+  <rect y="28" width="1200" height="64" fill="#ffffff" stroke="#dddddd" stroke-width="1"/>
+
+  <!-- Logo area -->
+  <text x="30" y="58" font-family="Arial, sans-serif" font-size="26" fill="#cc0000" font-weight="bold">ShopZone</text>
+  <text x="30" y="74" font-family="Arial, sans-serif" font-size="9" fill="#888888" letter-spacing="1">YOUR ONLINE SHOPPING DESTINATION</text>
+
+  <!-- Search bar -->
+  <rect x="320" y="38" width="520" height="34" rx="3" fill="#f9f9f9" stroke="#cccccc" stroke-width="1.5"/>
+  <text x="340" y="59" font-family="Arial" font-size="13" fill="#aaaaaa">Search products...</text>
+  <rect x="840" y="38" width="68" height="34" rx="0" fill="#cc0000"/>
+  <text x="874" y="60" text-anchor="middle" font-family="Arial" font-size="13" fill="white" font-weight="bold">Search</text>
+
+  <!-- Cart / account -->
+  <text x="938" y="55" font-family="Arial" font-size="12" fill="#0066cc" text-decoration="underline">My Account</text>
+  <text x="1030" y="55" font-family="Arial" font-size="12" fill="#0066cc" text-decoration="underline">Wishlist (3)</text>
+  <text x="1110" y="55" font-family="Arial" font-size="12" fill="#cc0000" font-weight="bold">Cart (7)</text>
+
+  <!-- Nav categories bar -->
+  <rect y="92" width="1200" height="34" fill="#333333"/>
+  <text x="20" y="114" font-family="Arial" font-size="12" fill="white">☰ All Categories</text>
+  <text x="144" y="114" font-family="Arial" font-size="12" fill="#cccccc">Electronics</text>
+  <text x="228" y="114" font-family="Arial" font-size="12" fill="#555555">|</text>
+  <text x="238" y="114" font-family="Arial" font-size="12" fill="#cccccc">Clothing</text>
+  <text x="300" y="114" font-family="Arial" font-size="12" fill="#555555">|</text>
+  <text x="310" y="114" font-family="Arial" font-size="12" fill="#cccccc">Home &amp; Garden</text>
+  <text x="420" y="114" font-family="Arial" font-size="12" fill="#555555">|</text>
+  <text x="430" y="114" font-family="Arial" font-size="12" fill="#cccccc">Sports</text>
+  <text x="476" y="114" font-family="Arial" font-size="12" fill="#555555">|</text>
+  <text x="486" y="114" font-family="Arial" font-size="12" fill="#cccccc">Toys &amp; Games</text>
+  <text x="590" y="114" font-family="Arial" font-size="12" fill="#555555">|</text>
+  <text x="600" y="114" font-family="Arial" font-size="12" fill="#cccccc">Beauty</text>
+  <text x="648" y="114" font-family="Arial" font-size="12" fill="#555555">|</text>
+  <text x="658" y="114" font-family="Arial" font-size="12" fill="#cccccc">Books</text>
+  <text x="698" y="114" font-family="Arial" font-size="12" fill="#555555">|</text>
+  <text x="708" y="114" font-family="Arial" font-size="12" fill="#cccccc">Pet Supplies</text>
+  <text x="800" y="114" font-family="Arial" font-size="12" fill="#555555">|</text>
+  <text x="810" y="114" font-family="Arial" font-size="12" fill="#ffcc00" font-weight="bold">Today's Deals</text>
+
+  <!-- Hero banner -->
+  <rect y="126" width="1200" height="148" fill="#fff3cd"/>
+  <rect y="126" width="1200" height="148" fill="none" stroke="#f59e0b" stroke-width="3"/>
+  <text x="600" y="172" text-anchor="middle" font-family="Arial, sans-serif" font-size="42" fill="#92400e" font-weight="bold">Summer Blowout Sale</text>
+  <text x="600" y="208" text-anchor="middle" font-family="Arial, sans-serif" font-size="18" fill="#555555">Huge discounts on thousands of items — this weekend only</text>
+  <rect x="472" y="228" width="256" height="36" fill="#cc0000" rx="3"/>
+  <text x="600" y="252" text-anchor="middle" font-family="Arial" font-size="16" fill="white" font-weight="bold">Shop the Sale</text>
+
+  <!-- Product grid -->
+  <rect y="274" width="1200" height="358" fill="#f5f5f5"/>
+
+  <!-- Sidebar filter -->
+  <rect x="0" y="274" width="196" height="358" fill="#eeeeee" stroke="#dddddd" stroke-width="1"/>
+  <rect x="0" y="274" width="196" height="28" fill="#444444"/>
+  <text x="98" y="293" text-anchor="middle" font-family="Arial" font-size="12" fill="white" font-weight="bold">Filter Results</text>
+  <text x="10" y="322" font-family="Arial" font-size="12" fill="#333333" font-weight="bold">Price</text>
+  <text x="10" y="340" font-family="Arial" font-size="11" fill="#0066cc" text-decoration="underline">Under $25</text>
+  <text x="10" y="356" font-family="Arial" font-size="11" fill="#0066cc" text-decoration="underline">$25 to $50</text>
+  <text x="10" y="372" font-family="Arial" font-size="11" fill="#0066cc" text-decoration="underline">$50 to $100</text>
+  <text x="10" y="388" font-family="Arial" font-size="11" fill="#0066cc" text-decoration="underline">$100+</text>
+  <text x="10" y="412" font-family="Arial" font-size="12" fill="#333333" font-weight="bold">Brand</text>
+  <text x="10" y="430" font-family="Arial" font-size="11" fill="#0066cc" text-decoration="underline">□ BrandOne (142)</text>
+  <text x="10" y="446" font-family="Arial" font-size="11" fill="#0066cc" text-decoration="underline">□ BrandTwo (89)</text>
+  <text x="10" y="462" font-family="Arial" font-size="11" fill="#0066cc" text-decoration="underline">□ OtherBrand (234)</text>
+  <text x="10" y="486" font-family="Arial" font-size="12" fill="#333333" font-weight="bold">Rating</text>
+  <text x="10" y="504" font-family="Arial" font-size="11" fill="#0066cc" text-decoration="underline">★★★★★ &amp; up</text>
+  <text x="10" y="520" font-family="Arial" font-size="11" fill="#0066cc" text-decoration="underline">★★★★☆ &amp; up</text>
+
+  <!-- Product cards (4 across) -->
+  <!-- Product 1 -->
+  <rect x="206" y="282" width="228" height="272" fill="white" stroke="#dddddd" stroke-width="1"/>
+  <rect x="206" y="282" width="228" height="20" fill="#b91c1c"/>
+  <text x="320" y="296" text-anchor="middle" font-family="Arial" font-size="10" fill="white" font-weight="bold">BESTSELLER</text>
+  <rect x="216" y="308" width="208" height="118" fill="#eeeeee"/>
+  <text x="320" y="370" text-anchor="middle" font-family="Arial" font-size="11" fill="#aaaaaa">[product image]</text>
+  <text x="212" y="448" font-family="Arial" font-size="12" fill="#333333">Premium Widget Deluxe XL</text>
+  <text x="212" y="466" font-family="Arial" font-size="11" fill="#888888" text-decoration="line-through">Was $89.99</text>
+  <text x="212" y="484" font-family="Arial" font-size="16" fill="#cc0000" font-weight="bold">$39.99</text>
+  <text x="212" y="500" font-family="Arial" font-size="11" fill="#338a33">★★★★☆ (482 reviews)</text>
+  <rect x="212" y="512" width="104" height="26" fill="#ff6600" rx="2"/>
+  <text x="264" y="530" text-anchor="middle" font-family="Arial" font-size="11" fill="white" font-weight="bold">Add to Cart</text>
+  <rect x="322" y="512" width="98" height="26" fill="#0066cc" rx="2"/>
+  <text x="371" y="530" text-anchor="middle" font-family="Arial" font-size="11" fill="white" font-weight="bold">Buy Now</text>
+
+  <!-- Product 2 -->
+  <rect x="448" y="282" width="228" height="272" fill="white" stroke="#dddddd" stroke-width="1"/>
+  <rect x="448" y="282" width="228" height="20" fill="#d97706"/>
+  <text x="562" y="296" text-anchor="middle" font-family="Arial" font-size="10" fill="white" font-weight="bold">LIMITED STOCK</text>
+  <rect x="458" y="308" width="208" height="118" fill="#eeeeee"/>
+  <text x="562" y="370" text-anchor="middle" font-family="Arial" font-size="11" fill="#aaaaaa">[product image]</text>
+  <text x="454" y="448" font-family="Arial" font-size="12" fill="#333333">Super Gadget Pro 3000</text>
+  <text x="454" y="466" font-family="Arial" font-size="11" fill="#888888" text-decoration="line-through">Was $129.00</text>
+  <text x="454" y="484" font-family="Arial" font-size="16" fill="#cc0000" font-weight="bold">$59.99</text>
+  <text x="454" y="500" font-family="Arial" font-size="11" fill="#338a33">★★★★★ (1,204 reviews)</text>
+  <rect x="454" y="512" width="210" height="26" fill="#ff6600" rx="2"/>
+  <text x="559" y="530" text-anchor="middle" font-family="Arial" font-size="11" fill="white" font-weight="bold">Add to Cart — Only 4 left!</text>
+
+  <!-- Product 3 -->
+  <rect x="690" y="282" width="228" height="272" fill="white" stroke="#dddddd" stroke-width="1"/>
+  <rect x="690" y="282" width="228" height="20" fill="#16a34a"/>
+  <text x="804" y="296" text-anchor="middle" font-family="Arial" font-size="10" fill="white" font-weight="bold">NEW ARRIVAL</text>
+  <rect x="700" y="308" width="208" height="118" fill="#eeeeee"/>
+  <text x="804" y="370" text-anchor="middle" font-family="Arial" font-size="11" fill="#aaaaaa">[product image]</text>
+  <text x="696" y="448" font-family="Arial" font-size="12" fill="#333333">Ultimate Thing Ultra Plus</text>
+  <text x="696" y="466" font-family="Arial" font-size="11" fill="#888888" text-decoration="line-through">Was $199.00</text>
+  <text x="696" y="484" font-family="Arial" font-size="16" fill="#cc0000" font-weight="bold">$74.99</text>
+  <text x="696" y="500" font-family="Arial" font-size="11" fill="#338a33">★★★☆☆ (37 reviews)</text>
+  <rect x="696" y="512" width="104" height="26" fill="#ff6600" rx="2"/>
+  <text x="748" y="530" text-anchor="middle" font-family="Arial" font-size="11" fill="white" font-weight="bold">Add to Cart</text>
+
+  <!-- Product 4 -->
+  <rect x="932" y="282" width="256" height="272" fill="white" stroke="#dddddd" stroke-width="1"/>
+  <rect x="932" y="282" width="256" height="20" fill="#7c3aed"/>
+  <text x="1060" y="296" text-anchor="middle" font-family="Arial" font-size="10" fill="white" font-weight="bold">STAFF PICK</text>
+  <rect x="942" y="308" width="236" height="118" fill="#eeeeee"/>
+  <text x="1060" y="370" text-anchor="middle" font-family="Arial" font-size="11" fill="#aaaaaa">[product image]</text>
+  <text x="938" y="448" font-family="Arial" font-size="12" fill="#333333">Mega Value Bundle Pack</text>
+  <text x="938" y="466" font-family="Arial" font-size="11" fill="#888888" text-decoration="line-through">Was $249.00</text>
+  <text x="938" y="484" font-family="Arial" font-size="16" fill="#cc0000" font-weight="bold">$99.00</text>
+  <text x="938" y="500" font-family="Arial" font-size="11" fill="#338a33">★★★★☆ (891 reviews)</text>
+  <rect x="938" y="512" width="240" height="26" fill="#cc0000" rx="2"/>
+  <text x="1058" y="530" text-anchor="middle" font-family="Arial" font-size="11" fill="white" font-weight="bold">Buy Now — Only 3 left!</text>
+
+  <!-- Footer -->
+  <rect y="632" width="1200" height="68" fill="#222222"/>
+  <text x="20" y="658" font-family="Arial" font-size="11" fill="#aaaaaa">© 2014 ShopZone Online Store. All prices subject to change without notice.</text>
+  <text x="20" y="676" font-family="Arial" font-size="10" fill="#666666">Visa | MasterCard | AmEx | Discover | PayPal | Money Order</text>
+</svg>

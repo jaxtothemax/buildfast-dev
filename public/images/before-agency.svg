@@ -1,0 +1,108 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 700" width="1200" height="700">
+  <defs>
+    <linearGradient id="navGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#1a1a2e"/>
+      <stop offset="100%" stop-color="#16213e"/>
+    </linearGradient>
+    <linearGradient id="heroBg" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#0f3460"/>
+      <stop offset="100%" stop-color="#1a1a2e"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Background -->
+  <rect width="1200" height="700" fill="#f0f0f0"/>
+
+  <!-- Nav -->
+  <rect width="1200" height="60" fill="url(#navGrad)"/>
+
+  <!-- Logo -->
+  <text x="30" y="36" font-family="Impact, Arial Black, sans-serif" font-size="22" fill="white">WEBMASTER</text>
+  <text x="163" y="36" font-family="Impact, Arial Black, sans-serif" font-size="22" fill="#e94560">PRO</text>
+  <text x="200" y="36" font-family="Impact, Arial Black, sans-serif" font-size="22" fill="white">STUDIOS</text>
+
+  <!-- Nav links -->
+  <text x="520" y="36" font-family="Arial, sans-serif" font-size="12" fill="#cccccc">Home</text>
+  <text x="567" y="36" font-family="Arial, sans-serif" font-size="12" fill="#cccccc">About Us</text>
+  <text x="638" y="36" font-family="Arial, sans-serif" font-size="12" fill="#cccccc">Services</text>
+  <text x="706" y="36" font-family="Arial, sans-serif" font-size="12" fill="#cccccc">Portfolio</text>
+  <text x="776" y="36" font-family="Arial, sans-serif" font-size="12" fill="#cccccc">Blog</text>
+  <text x="814" y="36" font-family="Arial, sans-serif" font-size="12" fill="#cccccc">Contact</text>
+
+  <!-- Contact CTA -->
+  <rect x="1070" y="14" width="106" height="30" fill="#e94560" rx="2"/>
+  <text x="1123" y="33" text-anchor="middle" font-family="Arial" font-size="12" fill="white" font-weight="bold">Get a Free Quote</text>
+
+  <!-- Hero -->
+  <rect y="60" width="1200" height="260" fill="url(#heroBg)"/>
+
+  <!-- Hero headline -->
+  <text x="600" y="138" text-anchor="middle" font-family="Impact, Arial Black, sans-serif" font-size="13" fill="#aaaacc" letter-spacing="4">AWARD-WINNING WEB DESIGN AGENCY</text>
+  <text x="600" y="192" text-anchor="middle" font-family="Impact, Arial Black, sans-serif" font-size="52" fill="white">WE BUILD WEBSITES</text>
+  <text x="600" y="240" text-anchor="middle" font-family="Impact, Arial Black, sans-serif" font-size="52" fill="#e94560">THAT GET RESULTS.</text>
+  <text x="600" y="278" text-anchor="middle" font-family="Arial, sans-serif" font-size="15" fill="#9999bb">Professional web design, SEO, and digital marketing for businesses of all sizes.</text>
+
+  <!-- CTA buttons (too many) -->
+  <rect x="368" y="296" width="168" height="46" fill="#e94560" rx="3"/>
+  <text x="452" y="324" text-anchor="middle" font-family="Arial" font-size="15" fill="white" font-weight="bold">Get a Free Quote</text>
+
+  <rect x="552" y="296" width="120" height="46" fill="transparent" stroke="#aaaacc" stroke-width="2" rx="3"/>
+  <text x="612" y="324" text-anchor="middle" font-family="Arial" font-size="15" fill="white">Our Work</text>
+
+  <rect x="688" y="296" width="144" height="46" fill="#e8830a" rx="3"/>
+  <text x="760" y="324" text-anchor="middle" font-family="Arial" font-size="15" fill="white" font-weight="bold">Call Us Now!</text>
+
+  <!-- Phone number -->
+  <text x="600" y="362" text-anchor="middle" font-family="Arial, sans-serif" font-size="13" fill="#9999bb">📞 Call us: 1-800-555-0199 | info@webmasterprostudios.com</text>
+
+  <!-- Services section -->
+  <rect y="380" width="1200" height="248" fill="#e8e8e8"/>
+  <rect y="380" width="1200" height="38" fill="#0f3460"/>
+  <text x="600" y="404" text-anchor="middle" font-family="Impact, sans-serif" font-size="18" fill="white" letter-spacing="1">OUR SERVICES — WHAT WE DO BEST</text>
+
+  <!-- Service boxes (mismatched colors) -->
+  <rect x="20" y="428" width="270" height="180" fill="white" stroke="#cccccc" stroke-width="1"/>
+  <rect x="20" y="428" width="270" height="34" fill="#e94560"/>
+  <text x="155" y="451" text-anchor="middle" font-family="Arial" font-size="14" fill="white" font-weight="bold">Web Design</text>
+  <rect x="32" y="472" width="246" height="72" fill="#f4f4f4" stroke="#dddddd" stroke-width="1"/>
+  <text x="155" y="511" text-anchor="middle" font-family="Arial" font-size="11" fill="#aaaaaa">[portfolio screenshot]</text>
+  <text x="32" y="566" font-family="Arial, sans-serif" font-size="12" fill="#444444">Custom websites built in WordPress.</text>
+  <text x="32" y="582" font-family="Arial, sans-serif" font-size="12" fill="#444444">Mobile-friendly and fast loading.</text>
+  <rect x="32" y="592" width="96" height="22" fill="#e94560" rx="2"/>
+  <text x="80" y="607" text-anchor="middle" font-family="Arial" font-size="10" fill="white" font-weight="bold">Learn More</text>
+
+  <rect x="310" y="428" width="270" height="180" fill="white" stroke="#cccccc" stroke-width="1"/>
+  <rect x="310" y="428" width="270" height="34" fill="#0f3460"/>
+  <text x="445" y="451" text-anchor="middle" font-family="Arial" font-size="14" fill="white" font-weight="bold">SEO Services</text>
+  <rect x="322" y="472" width="246" height="72" fill="#f4f4f4" stroke="#dddddd" stroke-width="1"/>
+  <text x="445" y="511" text-anchor="middle" font-family="Arial" font-size="11" fill="#aaaaaa">[rankings screenshot]</text>
+  <text x="322" y="566" font-family="Arial, sans-serif" font-size="12" fill="#444444">Rank higher on Google. Get more</text>
+  <text x="322" y="582" font-family="Arial, sans-serif" font-size="12" fill="#444444">traffic and leads every month.</text>
+  <rect x="322" y="592" width="96" height="22" fill="#0f3460" rx="2"/>
+  <text x="370" y="607" text-anchor="middle" font-family="Arial" font-size="10" fill="white" font-weight="bold">Learn More</text>
+
+  <rect x="600" y="428" width="270" height="180" fill="white" stroke="#cccccc" stroke-width="1"/>
+  <rect x="600" y="428" width="270" height="34" fill="#e8830a"/>
+  <text x="735" y="451" text-anchor="middle" font-family="Arial" font-size="14" fill="white" font-weight="bold">Logo Design</text>
+  <rect x="612" y="472" width="246" height="72" fill="#f4f4f4" stroke="#dddddd" stroke-width="1"/>
+  <text x="735" y="511" text-anchor="middle" font-family="Arial" font-size="11" fill="#aaaaaa">[logo examples]</text>
+  <text x="612" y="566" font-family="Arial, sans-serif" font-size="12" fill="#444444">Professional logos from just $149.</text>
+  <text x="612" y="582" font-family="Arial, sans-serif" font-size="12" fill="#444444">Unlimited revisions until satisfied.</text>
+  <rect x="612" y="592" width="96" height="22" fill="#e8830a" rx="2"/>
+  <text x="660" y="607" text-anchor="middle" font-family="Arial" font-size="10" fill="white" font-weight="bold">Learn More</text>
+
+  <rect x="890" y="428" width="292" height="180" fill="white" stroke="#cccccc" stroke-width="1"/>
+  <rect x="890" y="428" width="292" height="34" fill="#2d8a2d"/>
+  <text x="1036" y="451" text-anchor="middle" font-family="Arial" font-size="14" fill="white" font-weight="bold">Social Media</text>
+  <rect x="902" y="472" width="268" height="72" fill="#f4f4f4" stroke="#dddddd" stroke-width="1"/>
+  <text x="1036" y="511" text-anchor="middle" font-family="Arial" font-size="11" fill="#aaaaaa">[social media graphic]</text>
+  <text x="902" y="566" font-family="Arial, sans-serif" font-size="12" fill="#444444">Facebook, Instagram &amp; Twitter.</text>
+  <text x="902" y="582" font-family="Arial, sans-serif" font-size="12" fill="#444444">Grow your following today!</text>
+  <rect x="902" y="592" width="96" height="22" fill="#2d8a2d" rx="2"/>
+  <text x="950" y="607" text-anchor="middle" font-family="Arial" font-size="10" fill="white" font-weight="bold">Learn More</text>
+
+  <!-- Footer -->
+  <rect y="628" width="1200" height="72" fill="#1a1a2e"/>
+  <text x="20" y="654" font-family="Arial" font-size="11" fill="#888888">© 2015 Webmaster Pro Studios. All Rights Reserved. | Privacy Policy | Terms of Use</text>
+  <text x="20" y="672" font-family="Arial" font-size="10" fill="#555555">Visitor counter: 12,483 | Designed by Webmaster Pro Studios | Hosted on BlueHost</text>
+</svg>
