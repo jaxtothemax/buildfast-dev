@@ -1,0 +1,101 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --accent: #f97316;
+  --bg: #0a0a0a;
+  --surface: #111111;
+  --border: rgba(255, 255, 255, 0.07);
+  --muted: rgba(255, 255, 255, 0.45);
+}
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+html {
+  scroll-behavior: auto; /* Lenis handles this */
+}
+
+body {
+  background-color: var(--bg);
+  color: #fff;
+  overflow-x: hidden;
+}
+
+/* Custom cursor — hide default on non-touch devices */
+@media (hover: hover) and (pointer: fine) {
+  * {
+    cursor: none !important;
+  }
+}
+
+/* Selection color */
+::selection {
+  background: var(--accent);
+  color: #000;
+}
+
+/* Smooth scrolling placeholder for Lenis */
+html.lenis {
+  height: auto;
+}
+.lenis.lenis-smooth {
+  scroll-behavior: auto;
+}
+.lenis.lenis-smooth [data-lenis-prevent] {
+  overscroll-behavior: contain;
+}
+
+/* Section label style */
+.section-label {
+  font-family: var(--font-geist-mono);
+  font-size: 0.75rem;
+  letter-spacing: 0.05em;
+  color: var(--muted);
+}
+
+.section-label span {
+  color: var(--accent);
+}
+
+/* Thin border utilities */
+.border-subtle {
+  border-color: var(--border);
+}
+
+/* Glow */
+.radial-glow {
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(
+    ellipse 60% 40% at 50% 50%,
+    rgba(249, 115, 22, 0.06) 0%,
+    transparent 70%
+  );
+  pointer-events: none;
+}
+
+/* Will-change optimization */
+.animating {
+  will-change: transform, opacity;
+}
+
+/* Green pulsing dot */
+@keyframes pulse-dot {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.4; }
+}
+
+.pulse-dot {
+  animation: pulse-dot 2s ease-in-out infinite;
+}
+
+/* Overflow clip for word animation */
+.word-clip {
+  overflow: hidden;
+  display: inline-block;
+}
